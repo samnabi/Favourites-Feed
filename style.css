@@ -1,0 +1,195 @@
+/* Modified from Eric Meyer's Reset */ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,p,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size: 100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}img,table,iframe{max-width: 100%;}
+/* Clearfix */ .clearfix:after, .wrap:after { visibility: hidden; display: block; font-size: 0; content: "."; clear: both; height: 0; } * html .clearfix, * html .wrap { zoom: 1; } *:first-child+html .clearfix, *:first-child+html .wrap { zoom: 1; }
+/* Natural box model */ *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+/* Readonly form inputs */ [readonly]{ cursor: auto;-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+body {
+	background: #FAFAED;
+	line-height: 1.6em;
+	font-family: pt-sans, sans-serif;
+	color: #222;
+}
+
+a {
+	color: #E54113;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:visited {
+	color: #969681;
+}
+
+h1, h2, p, form {
+	text-align: center;
+	max-width: 30em;
+	margin: 1em auto;
+}
+h1 {
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.add {
+	display: inline-block;
+	width: 50%;
+	margin-top: 1em;
+	padding: 6em 0.5em 0.5em;
+	cursor: pointer;
+	background-size: 5em auto;
+	background-position: center 1em;
+	background-repeat: no-repeat;
+	font-weight: bold;
+	color: #222;
+	float: left;
+	border-radius: 0.4em 0.4em 0 0;
+}
+.add:hover {
+	text-decoration: none;
+}
+.add.selected {
+	background-color: #D8D8C0;
+}
+[name="addTwitter"] { background-image: url('twitter.png'); }
+[name="addReddit"] { background-image: url('reddit.png'); }
+
+fieldset {
+	clear: left;
+	background-color: #D8D8C0;
+	margin-bottom: 2em;
+	border-radius: 0 0 0.4em 0.4em;
+}
+label {
+	display: inline-block;
+	padding: 2em 1em;
+	text-align: left;
+}
+label span {
+	display: block;
+	font-size: 0.7em;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+fieldset a {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+input[type="text"] {
+	padding: 0.5em;
+	border: 1px solid #969681;
+	border-radius: 0.2em;
+	font-size: 1rem;
+	width: 16em;
+}
+
+.reddit-help {
+	display: none;
+	font-size: 0.8em;
+	margin-bottom: 1rem;
+	list-style-type: decimal;
+	padding-left: 2em;
+}
+.reddit-help li {
+	margin-bottom: 0.4em;
+}
+
+input[type="submit"] {
+	display: inline-block;
+	margin: 1em;
+	padding: 0.5em 1em;
+	background: #FF4916;
+	border-radius: 0.2em;
+	border: 0;
+	font-size: 1rem;
+	box-shadow: inset 0 0 0.4em rgba(0,0,0,0.4);
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+}
+input[type="submit"]:hover {
+	background: #E54113;
+}
+input[type="submit"]:active {
+	box-shadow: inset 0 0 0.6em rgba(0,0,0,0.6);
+}
+
+.staging {
+	text-align: left;
+}
+.staging li {
+	border-top: 1px solid #C1C1AC;
+}
+.staging li:last-child {
+	border-bottom: 1px solid #C1C1AC;
+}
+.staging input[type="text"] {
+	border: none;
+	width: auto;
+}
+.staging a {
+	cursor: pointer;
+	font-size: 0.8em;
+	line-height: 1rem;
+}
+
+.hidden {
+	display: none;
+}
+
+.credit {
+	max-width: 100%;
+	font-size: 0.8em;
+	color: #969681;
+}
+
+.fav_tweets li {
+	display: table;
+	width: 46em;
+	margin: 0 auto 2em;
+}
+.fav_tweets li p {
+	display: table-cell;
+	vertical-align: top;
+	padding: 0.2em 1em;
+	margin: 0;
+}
+.authorinfo {
+	width: 16em;
+	border-right: 1px solid #C1C1AC;
+	text-align: right;
+}
+.authorinfo img {
+	width: 3em;
+	height: 3em;
+	border-radius: 3em;
+	display: block;
+	float: right;
+	margin-left: 1em;
+}
+.authorinfo span {
+	display: block;
+	float: right;
+}
+.authorinfo .username,
+.authorinfo .timestamp {
+	font-size: 0.8em;
+	line-height: 1.8;
+	display: block;
+}
+.authorinfo .timestamp {
+	color: #969681;
+}
+.tweet {
+	width: 30em;
+	text-align: left;
+}
+
+.errors {
+	background: #FBFF89;
+	margin: 2em auto;
+	max-width: 20em;
+	padding: 1em;
+	border-radius: 0.4em;
+}
