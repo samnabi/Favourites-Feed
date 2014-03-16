@@ -2,6 +2,8 @@
 
 This app combines your favourite tweets and saved reddit links into a single read-it-later list. No need for a separate bookmarking service.
 
+Check a live demo at [favs.samnabi.com](http://favs.samnabi.com).
+
 ## Setup
 
 First, you'll need to [register an app with the Twitter API](https://apps.twitter.com/app/new) and enter the relevant details in `codebird.php`.
